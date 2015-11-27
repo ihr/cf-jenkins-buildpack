@@ -21,7 +21,7 @@ source $bp_dir/bin/common.sh
 mkdir -p $vendor_dir
 
 status "Installing java."
-cp $JRE_ARHIVE $vendor_dir
+cp ./$JRE_ARHIVE $vendor_dir
 cd $vendor_dir
 ./$JRE_ARHIVE
 rm $JRE_ARHIVE
