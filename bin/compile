@@ -9,7 +9,7 @@ cache_dir=$2
 bp_dir=$(cd $(dirname $0); cd ..; pwd)
 vendor_dir=$build_dir/vendor
 JRE_ARHIVE=jre-1.6.38-linux-amd64.bin
-JRE_ARHIVE_FILE=$bp_dir/jre-1.6.38-linux-amd64.bin
+JRE_ARHIVE_FILE=$bp_dir/files/jre-1.6.38-linux-amd64.bin
 
 # CF Common
 BUILDPACK_PATH=$bp_dir
@@ -21,7 +21,7 @@ source $bp_dir/bin/common.sh
 mkdir -p $vendor_dir
 
 status "Installing java."
-cp ./$JRE_ARHIVE $vendor_dir
+cp $JRE_ARHIVE_FILE $vendor_dir
 cd $vendor_dir
 ./$JRE_ARHIVE
 rm $JRE_ARHIVE
